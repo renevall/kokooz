@@ -4,15 +4,24 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
+<<<<<<< HEAD
     # ('Your Name', 'your_email@domain.com'),
+=======
+    # ('Your Name', 'your_email@example.com'),
+>>>>>>> melveg/master
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': '',                      # Or path to database file if using sqlite3.
+=======
+        'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '/home/melveg/kokooz/databases/kokooz',                      # Or path to database file if using sqlite3.
+>>>>>>> melveg/master
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -43,15 +52,22 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+<<<<<<< HEAD
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = ''
+=======
+# Absolute filesystem path to the directory that will hold user uploaded files.
+# Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = '/home/melveg/kokooz/files/'
+>>>>>>> melveg/master
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = ''
 
+<<<<<<< HEAD
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
@@ -59,6 +75,34 @@ ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '20xc2d(bg6w7y6v4e0_wd0d@4am#sd63@019$%&+l&z&6#tb8^'
+=======
+# Absolute path to the directory that holds media.
+# Example: "/home/media/media.lawrence.com/static/"
+STATICFILES_ROOT = ''
+
+# URL that handles the static files served from STATICFILES_ROOT.
+# Example: "http://static.lawrence.com/", "http://example.com/static/"
+STATICFILES_URL = '/static/'
+
+# URL prefix for admin media -- CSS, JavaScript and images.
+# Make sure to use a trailing slash.
+# Examples: "http://foo.com/static/admin/", "/static/admin/".
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+# A list of locations of additional static files
+STATICFILES_DIRS = ()
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = 'm0(e=1$ofx2eeo64l+0y^tk7ay)(t+#t8wt-kvfo*7z@v3de!9'
+>>>>>>> melveg/master
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -81,6 +125,10 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+<<<<<<< HEAD
+=======
+    '/home/melveg/kokooz/templates',
+>>>>>>> melveg/master
 )
 
 INSTALLED_APPS = (
@@ -89,6 +137,41 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+<<<<<<< HEAD
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
 )
+=======
+    'django.contrib.staticfiles',
+    # Uncomment the next line to enable the admin:
+    'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    'django.contrib.admindocs',
+    'table',
+    'recordlist',
+    'gcomment',
+)
+
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django.request':{
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+}
+>>>>>>> melveg/master

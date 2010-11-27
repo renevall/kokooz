@@ -1,0 +1,13 @@
+<form name="create" action="/gcomment/create/" method="POST">
+ <table>
+  <thead>
+   <tr><th>Agregar comentario</th></tr>
+  </thead>
+  <tbody>
+  <tr><th>Comentario:</th><td>
+  {{ form.comment }}
+  <input type="hidden" name="table_id" value="{{ table_id }}"/>
+  </td></tr>
+  <tr><td><input name="commentButton" type="submit" value="Comentar"/></td></tr>
+  <tbody>
+</form>

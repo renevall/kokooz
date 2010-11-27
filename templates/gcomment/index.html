@@ -1,0 +1,9 @@
+<div>
+<a href="/gcomment/create/{{ table_id }}/">Agregar Comentario</a>
+{% if comments %}
+    {% for comment in comments %}
+        <p>{{ comment.comment }}</p>
+    {% endfor %}
+{% else %}
+    <p>No links are available.</p>
+{% endif %}

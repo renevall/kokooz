@@ -1,0 +1,9 @@
+{% if elements %}
+    <ul>
+    {% for element in elements %}
+        <li><a href="/element/{{ element.id }}/">{{ element.element }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No links are available.</p>
+{% endif %}
